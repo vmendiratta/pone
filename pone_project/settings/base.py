@@ -40,6 +40,7 @@ INSTALLED_APPS = (
 
     # 3rd-party apps.
     'django_extensions',
+    'rest_framework',
 
     # Project apps.
     #'pone_project.apps.',
@@ -185,4 +186,12 @@ LOGGING = {
             'level': 'INFO',
         }
     }
+}
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
 }
